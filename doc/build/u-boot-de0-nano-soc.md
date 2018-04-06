@@ -2,7 +2,7 @@
 
 There are two ways
 
-1. run scripts/build-u-boot-de0-nano-soc.sh (easy)
+1. run scripts/build-u-boot-2016.03-de0-nano-soc.sh (easy)
 2. run this chapter step-by-step (annoying)
 
 #### Download U-boot Source
@@ -10,14 +10,14 @@ There are two ways
 ##### Clone from git.denx.de/u-boot.git
 
 ```console
-shell$ git clone git://git.denx.de/u-boot.git u-boot-de0-nano-soc
+shell$ git clone git://git.denx.de/u-boot.git u-boot-2016.03-de0-nano-soc
 ```
 
 ##### Checkout v2016.03
 
 ```console
-shell$ cd u-boot-de0-nano-soc
-shell$ git checkout -b u-boot-2016.03-de0-nano-soc refs/tags/v2016.03
+shell$ cd u-boot-2016.03-de0-nano-soc
+shell$ git checkout -b v2016.03-de0-nano-soc refs/tags/v2016.03
 ```
 
 #### Patch for de0-nano-soc
@@ -26,6 +26,7 @@ shell$ git checkout -b u-boot-2016.03-de0-nano-soc refs/tags/v2016.03
 shell$ patch -p0 < ../files/u-boot-2016.03-de0-nano-soc.diff
 shell$ git add --update
 shell$ git commit -m "patch for de0-nano-soc"
+shell$ git tag -a v2016.03-de0-nano-soc-1 -m "Release v2016.03-1 for de0-nano-soc"
 ```
 
 #### Setup for Build 
