@@ -11,7 +11,7 @@ index 65c1197..2691e50 100644
 +CONFIG_MENU_SHOW=y
 +CONFIG_CMD_BOOTMENU=y
 diff --git include/configs/socfpga_de0_nano_soc.h include/configs/socfpga_de0_nano_soc.h
-index cbc7396..ef3621c 100644
+index cbc7396..7381008 100644
 --- include/configs/socfpga_de0_nano_soc.h
 +++ include/configs/socfpga_de0_nano_soc.h
 @@ -34,10 +34,31 @@
@@ -67,7 +67,7 @@ index cbc7396..ef3621c 100644
  		"load mmc 0:1 ${fdt_addr} ${fdtimage}\0" \
 +        "fpgadata=0x02000000\0" \
 +	"bootenv=uEnv.txt\0" \
-+	"config=" CONFIG_DEFAULT_DEVICE_TREE "\0" \
++        "config_name=" CONFIG_SYS_CONFIG_NAME "\0" \
 +	"loadbootenv=load mmc 0 ${loadaddr} ${bootenv}\0" \
 +	"importbootenv=echo Importing environment from mmc ...;" \
 +		"env import -t $loadaddr $filesize\0" \
