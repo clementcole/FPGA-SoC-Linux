@@ -2,7 +2,7 @@
 
 There are two ways
 
-1. run scripts/build-u-boot-zynq-zybo.sh (easy)
+1. run scripts/build-u-boot-2016.03-zynq-zybo.sh (easy)
 2. run this chapter step-by-step (annoying)
 
 #### Download U-boot Source
@@ -10,14 +10,14 @@ There are two ways
 ##### Clone from git.denx.de/u-boot.git
 
 ```console
-shell$ git clone git://git.denx.de/u-boot.git u-boot-zynq-zybo
+shell$ git clone git://git.denx.de/u-boot.git u-boot-2016.03-zynq-zybo
 ```
 
 ##### Checkout v2016.03
 
 ```console
-shell$ cd u-boot-zynq-zybo
-shell$ git checkout -b u-boot-2016.03-zynq-zybo refs/tags/v2016.03
+shell$ cd u-boot-2016.03-zynq-zybo
+shell$ git checkout -b v2016.03-zynq-zybo refs/tags/v2016.03
 ```
 
 #### Patch for zynq-zybo
@@ -26,12 +26,13 @@ shell$ git checkout -b u-boot-2016.03-zynq-zybo refs/tags/v2016.03
 shell$ patch -p0 < ../files/u-boot-2016.03-zynq-zybo.diff
 shell$ git add --update
 shell$ git commit -m "patch for zynq-zybo"
+shell$ git tag -a v2016.03-zynq-zybo-1 -m "Release v2016.03-1 for ZYBO"
 ```
 
 #### Setup for Build 
 
 ```console
-shell$ cd u-boot-zynq-zybo
+shell$ cd u-boot-2016.03-zynq-zybo
 shell$ export ARCH=arm
 shell$ export CROSS_COMPILE=arm-linux-gnueabihf-
 shell$ make zynq_zybo_defconfig
