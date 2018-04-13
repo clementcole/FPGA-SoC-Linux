@@ -50,7 +50,7 @@ EOF
 ```
 
 ````console
-shell# export DISKDEV=/dev/sdc1
+shell# export DISKDEV=/dev/sdc
 shell# sh scripts/format-disk-zynq.sh
 
 Welcome to fdisk (util-linux 2.25.2).

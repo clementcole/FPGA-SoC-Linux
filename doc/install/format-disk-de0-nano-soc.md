@@ -57,7 +57,7 @@ EOF
 ````
 
 ````console
-shell# export DISKDEV=/dev/sdc1
+shell# export DISKDEV=/dev/sdc
 shell# sh scripts/format-disk-de0-nano-soc.sh
 
 Welcome to fdisk (util-linux 2.25.2).
